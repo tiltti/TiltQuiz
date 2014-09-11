@@ -19,6 +19,8 @@
 		9610207519C2014F0019F28D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9610205D19C2014F0019F28D /* UIKit.framework */; };
 		9610207D19C2014F0019F28D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9610207B19C2014F0019F28D /* InfoPlist.strings */; };
 		9610207F19C2014F0019F28D /* TiltQuizTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9610207E19C2014F0019F28D /* TiltQuizTests.m */; };
+		9610208B19C204D10019F28D /* TILTQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9610208919C204D10019F28D /* TILTQuizViewController.m */; };
+		9610208C19C204D10019F28D /* TILTQuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9610208A19C204D10019F28D /* TILTQuizViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		9610207A19C2014F0019F28D /* TiltQuizTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TiltQuizTests-Info.plist"; sourceTree = "<group>"; };
 		9610207C19C2014F0019F28D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9610207E19C2014F0019F28D /* TiltQuizTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TiltQuizTests.m; sourceTree = "<group>"; };
+		9610208819C204D10019F28D /* TILTQuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TILTQuizViewController.h; sourceTree = "<group>"; };
+		9610208919C204D10019F28D /* TILTQuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TILTQuizViewController.m; sourceTree = "<group>"; };
+		9610208A19C204D10019F28D /* TILTQuizViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TILTQuizViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +82,9 @@
 		9610204D19C2014F0019F28D = {
 			isa = PBXGroup;
 			children = (
+				9610208819C204D10019F28D /* TILTQuizViewController.h */,
+				9610208919C204D10019F28D /* TILTQuizViewController.m */,
+				9610208A19C204D10019F28D /* TILTQuizViewController.xib */,
 				9610205F19C2014F0019F28D /* TiltQuiz */,
 				9610207819C2014F0019F28D /* TiltQuizTests */,
 				9610205819C2014F0019F28D /* Frameworks */,
@@ -192,6 +200,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Tiltti;
 				TargetAttributes = {
+					9610205519C2014F0019F28D = {
+						DevelopmentTeam = D9L22K7847;
+					};
 					9610207019C2014F0019F28D = {
 						TestTargetID = 9610205519C2014F0019F28D;
 					};
@@ -220,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9610208C19C204D10019F28D /* TILTQuizViewController.xib in Resources */,
 				9610206419C2014F0019F28D /* InfoPlist.strings in Resources */,
 				9610206C19C2014F0019F28D /* Images.xcassets in Resources */,
 			);
@@ -240,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9610208B19C204D10019F28D /* TILTQuizViewController.m in Sources */,
 				9610206619C2014F0019F28D /* main.m in Sources */,
 				9610206A19C2014F0019F28D /* TILTAppDelegate.m in Sources */,
 			);
@@ -358,10 +371,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TiltQuiz/TiltQuiz-Prefix.pch";
 				INFOPLIST_FILE = "TiltQuiz/TiltQuiz-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -371,10 +387,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TiltQuiz/TiltQuiz-Prefix.pch";
 				INFOPLIST_FILE = "TiltQuiz/TiltQuiz-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
