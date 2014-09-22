@@ -7,6 +7,7 @@
 //
 
 #import "TILTAppDelegate.h"
+#import "TILTQuizViewController.h"
 
 @implementation TILTAppDelegate
 
@@ -14,6 +15,11 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+
+    TILTQuizViewController *quizVC = [[TILTQuizViewController alloc] init];
+    
+    self.window.rootViewController = quizVC;
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

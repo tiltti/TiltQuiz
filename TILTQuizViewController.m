@@ -10,29 +10,58 @@
 
 @interface TILTQuizViewController ()
 
+@property (nonatomic) int currentQuestionIndex;
+
+@property (nonatomic, copy) NSArray *questions;
+@property (nonatomic, copy) NSArray *answers;
+
+
+@property (nonatomic, weak) IBOutlet UILabel *questionLabel;
+
+@property (nonatomic, weak) IBOutlet UILabel *answerLabel;
+
 @end
 
 @implementation TILTQuizViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    
+    if (self)
+    {
+        self.questions = @[@"Kumpi kissa on kilpikonna?",
+                           @"Mika on Sofian toinen nimi?",
+                           @"Mika on Lohjan paras kaupunginosa?"];
+        
+        self.answers = @[@"Veera",
+                         @"Elviira",
+                         @"Virkkala"];
     }
     return self;
 }
 
-- (void)viewDidLoad
+- (IBAction)showQuestions:(id)sender
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // next question and check if last
+    self.currentQuestionIndex++;
+    
+    if (self.currentQuestionIndex == [self.questions count])
+        self.currentQuestionIndex = 0;
+    
+    // get index
+    NSString *question = self.questions[self.currentQuestionIndex];
+    
+    self.questionLabel.text = question;
+    
+    self.answerLabel.text = @"???";
+    
 }
-
-- (void)didReceiveMemoryWarning
+- (IBAction)showAnswer:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSString *answer = self.answers[self.currentQuestionIndex];
+    
+    self.answerLabel.text = answer;
 }
 
 @end
